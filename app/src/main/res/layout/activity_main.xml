@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgCD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtTenBaiHat"
+        android:padding="64dp"
+
+        app:srcCompat="@drawable/disc" />
+
+    <TextView
+        android:id="@+id/txtTenBaiHat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginBottom="250dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="Tên bài hát"
+        android:textColor="#fff"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/txtNguoiTheHien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginBottom="190dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="Thể hiện"
+        android:textColor="#ccc"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ibtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="9">
+
+        <ImageButton
+            android:id="@+id/ibtnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/previous_white_32x32"/>
+
+        <ImageButton
+            android:id="@+id/ibtnPlay"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:src="@drawable/play_white_32x32" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnStop"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:layout_marginLeft="32dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:src="@drawable/stop_button_32x32" />-->
+
+        <ImageButton
+            android:id="@+id/ibtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/next_white_32x32" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:thumb="@drawable/thumb"
+        android:id="@+id/seekbarSong"
+        android:progressDrawable="@drawable/background"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_above="@+id/ibtn"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbarSong"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbarSong"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="346dp"
+        android:layout_marginBottom="16dp"
+        android:text="05:00"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+</RelativeLayout>
